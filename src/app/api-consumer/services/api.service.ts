@@ -34,4 +34,24 @@ export class ApiService {
         })
     );
   }
+
+  getPokemonDetails(apiName: string, id: number): Observable<any> {
+
+    return this.configService.getConfig().pipe(
+      map((config: ApiConfig) =>
+        config.apis.find(
+          (api: { name: string; endpoint: string }) => api.name === apiName
+        )
+      ),
+
+        switchMap(pokemonApiConfig => {
+          if (pokemonApiConfig) {
+            const endpoint = `${pokemonApiConfig.endpoint}/pokemon/${id}`;
+            return this.http.get(endpoint);
+          } else {
+            return of(null);
+          }
+        })
+    );
+  }
 }
