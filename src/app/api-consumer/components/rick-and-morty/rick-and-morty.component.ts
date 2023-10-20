@@ -24,23 +24,5 @@ export class RickAndMortyComponent implements OnInit {
       this.cd.detectChanges();  // Agrega esta línea
     });
   }
-  nextPage(): void {
-    console.log('Current Page before next:', this.currentPage);
-    if (this.currentPage < this.totalPages) {
-      this.loadCharacters(this.currentPage + 1);
-    }
-  }
-  
-  prevPage(): void {
-    console.log('Current Page before prev:', this.currentPage);
-    if (this.currentPage > 1) {
-      this.loadCharacters(this.currentPage - 1);
-    }
-  }
-  
-  loadCharacters(page: number): void {
-    console.log('Loading characters for page:', page);
-    this.getRickAndMortyData(page);
-  }
   
 }
