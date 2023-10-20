@@ -1,2 +1,14 @@
-<p>rick-and-morty works!</p>
-<button onclick="getRickAndMortyData()">Hii click me</button>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+  <ng-container *ngFor="let character of characters">
+    <div class="card">
+      <img [src]="character.image" alt="{{ character.image }}" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <p class="text-xl font-semibold">{{ character.name }}</p>
+        <div class="flex justify-between mt-4">
+          <button class="text-white bg-green-500 px-4 py-2 rounded">Editar</button>
+          <button class="text-white bg-red-500 px-4 py-2 rounded">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
