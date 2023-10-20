@@ -1,0 +1,12 @@
+{
+    "apis": [
+        {
+            "name": "Rick-and-Morty",
+            "endpoint": "https://rickandmortyapi.com/api/character"
+        },
+        {
+            "name": "PokeAPI",
+            "endpoint": "https://pokeapi.co/api/v2/pokemon"
+        }
+    ]
+}
