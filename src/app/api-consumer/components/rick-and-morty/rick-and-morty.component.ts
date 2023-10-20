@@ -20,4 +20,5 @@ export class RickAndMortyComponent implements OnInit{
         this.characters = data.results; // Asumiendo que los personajes están en data.results
       });
   }
+  
 }

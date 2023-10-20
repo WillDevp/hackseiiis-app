@@ -1,13 +1,17 @@
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-2">
   <ng-container *ngFor="let character of characters">
-    <div class="card">
-      <img [src]="character.image" alt="{{ character.image }}" class="w-full h-48 object-cover">
-      <div class="p-4">
-        <p class="text-xl font-semibold">{{ character.name }}</p>
-        <div class="flex justify-between mt-4">
-          <button class="text-white bg-green-500 px-4 py-2 rounded">Editar</button>
-          <button class="text-white bg-red-500 px-4 py-2 rounded">Eliminar</button>
-        </div>
+    <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 card">
+      <div class="flex justify-end px-4 pt-4">
+        <!-- ... (Resto del código para el botón de dropdown) ... -->
+      </div>
+      <div class="flex flex-col items-center pb-10">
+        <img class="w-32 h-32 mb-3 rounded-full shadow-lg" [src]="character.image" alt="{{ character.name }} image"/>
+        <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">{{ character.name }}</h5>
+        <span class="text-sm text-gray-500 dark:text-gray-400">{{ character.species }} - {{ character.status }}</span>
+        <!--
+        Suponiendo que tienes funciones de addFriend y sendMessage,
+        o puedes simplemente eliminar estos botones si no son necesarios.
+        -->
       </div>
     </div>
   </ng-container>
