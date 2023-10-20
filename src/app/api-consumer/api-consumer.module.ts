@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ApiListComponent } from './components/api-list/api-list.component';
-import { ApiDetailComponent } from './components/api-detail/api-detail.component';
 import { RickAndMortyComponent } from './components/rick-and-morty/rick-and-morty.component';
+import { LandingComponent } from './components/landing/landing.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 
 @NgModule({
   declarations: [
-    ApiListComponent,
-    ApiDetailComponent,
-    RickAndMortyComponent
+    RickAndMortyComponent,
+    LandingComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule
   ],
   exports: [
     RickAndMortyComponent  // Asegúrate de que esté siendo exportado aquí

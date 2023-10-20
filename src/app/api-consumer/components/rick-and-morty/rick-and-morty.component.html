@@ -1,3 +1,5 @@
+
+<div class="app-background">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-2">
   <ng-container *ngFor="let character of characters">
     <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 card">
@@ -8,11 +10,10 @@
         <img class="w-32 h-32 mb-3 rounded-full shadow-lg" [src]="character.image" alt="{{ character.name }} image"/>
         <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">{{ character.name }}</h5>
         <span class="text-sm text-gray-500 dark:text-gray-400">{{ character.species }} - {{ character.status }}</span>
-        <!--
-        Suponiendo que tienes funciones de addFriend y sendMessage,
-        o puedes simplemente eliminar estos botones si no son necesarios.
-        -->
       </div>
     </div>
   </ng-container>
+
+
+</div>
 </div>
