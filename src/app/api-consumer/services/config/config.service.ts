@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ConfigService {
-  private configUrl = 'assets/mock/api/api-config.json';
+  private configUrl = '../../../../assets/mocks/apis/api-config.json';
   constructor(private http: HttpClient) { }
   getConfig(): Observable<any>{
     return this.http.get(this.configUrl);
